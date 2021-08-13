@@ -137,8 +137,8 @@ namespace numpy
              types::ndarray<long, types::pshape<long>>,
              types::ndarray<long, types::pshape<long>>,
              types::ndarray<long, types::pshape<long>>>
-  unique(E const &expr, bool return_index, bool return_inverse,
-         bool return_counts)
+  unique(E const &expr, std::true_type return_index, std::true_type return_inverse,
+         std::true_type return_counts)
   {
     assert(return_counts && "invalid signature otherwise");
 
